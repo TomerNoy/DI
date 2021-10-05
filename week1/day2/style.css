@@ -1,0 +1,63 @@
+:root {
+  --black: #000000;
+  --blue: #14213d;
+  --yellow: #fca311;
+  --grey: #e5e5e5;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0%;
+}
+
+nav {
+  background-image: linear-gradient(to right, var(--black), var(--blue));
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: var(--grey);
+}
+
+i {
+  padding: 15px 30px;
+  float: left;
+}
+
+li {
+  list-style: none;
+  padding: 15px 30px;
+  display: inline;
+  float: right;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+ul a:hover {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.active {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.products div {
+  /* padding: 30px;
+  margin: 30px; */
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  background-color: var(--yellow);
+  color: var(--blue);
+  padding: 10px;
+  font-weight: bold;
+}
