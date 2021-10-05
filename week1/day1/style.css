@@ -1,0 +1,53 @@
+* {
+  margin: 0%;
+  color: #f1faee;
+}
+
+nav {
+  background-image: linear-gradient(#457b9d, #1d3557);
+  opacity: 0.9;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav h1 {
+  float: left;
+  padding: 10px 0px 10px 20px;
+  font-size: 30px;
+}
+
+nav li {
+  display: inline;
+  padding: 20px;
+  float: right;
+}
+.content {
+  padding: 80px 10vw 100px 10vw;
+  background: url("assets/bk.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.content h1 {
+  text-transform: uppercase;
+  font-family: fantasy;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+.content img {
+  float: left;
+  padding-right: 16px;
+}
+
+footer {
+  background-image: linear-gradient(to right, #e63946, #1d3557);
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0.9;
+}
