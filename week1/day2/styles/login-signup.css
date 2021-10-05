@@ -1,0 +1,40 @@
+:root {
+  --black: #000000;
+  --blue: #14213d;
+  --yellow: #fca311;
+  --grey: #e5e5e5;
+  --white: #ffffff;
+}
+
+form {
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  border: 2px solid var(--blue);
+  padding: 50px 30px 10px 10px;
+  border-radius: 12px;
+  background-color: var(--grey);
+}
+
+label,
+input {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+label {
+  width: 30%;
+  text-align: right;
+}
+
+label + input {
+  width: 50%;
+}
+
+#submit {
+  float: right;
+  /* background-color: var(--blue);
+  /* color: var(--white);
+  font-weight: bold; */ */
+}

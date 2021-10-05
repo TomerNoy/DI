@@ -1,18 +1,25 @@
 div {
-    display: inline;
-  }
-  body {
-    margin-top: 100px;
-  }
-  .row {
-    display: block;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
-  .item {
-    display: inline-block;
-    text-align: center;
-    width: 33%;
-    max-width: 400px;
-  }
+  display: inline;
+}
+body {
+  margin-top: 100px;
+}
+.row {
+  display: block;
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+  max-width: 400px;
+}
+
+.item p {
+  margin-bottom: 5px;
+}
+
+.item button {
+  margin-bottom: 100px;
+}
