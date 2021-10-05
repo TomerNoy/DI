@@ -46,9 +46,25 @@ ul a:hover {
   font-weight: bold;
 }
 
-.products div {
-  /* padding: 30px;
-  margin: 30px; */
+div {
+  display: inline;
+}
+body {
+  margin-top: 100px;
+}
+.row {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.item {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+  max-width: 400px;
+  /* background-color: gray; */
+  /* margin: 100px 0px px 0px; */
 }
 
 footer {
