@@ -24,12 +24,15 @@ nav li {
   float: right;
 }
 .content {
-  padding: 80px 10vw 100px 10vw;
+  padding-top: 20vh;
+  padding-left: 18vw;
+  padding-right: 18vw;
   background: url("assets/bk.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100vh;
 }
 .content h1 {
   text-transform: uppercase;
@@ -50,4 +53,34 @@ footer {
   width: 100%;
   text-align: center;
   opacity: 0.9;
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  .content {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: justify;
+    -moz-text-align-last: center;
+  }
+  .content h1 {
+    text-align: center;
+  }
+  .content h1 b {
+    color: #e63946;
+  }
+  .content img {
+    float: none;
+    display: block;
+    margin: auto;
+    padding: 0px 0px 16px 0px;
+  }
+}
+
+/* tablets */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .content {
+    text-align: justify;
+    -moz-text-align-last: center;
+  }
 }

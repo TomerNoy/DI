@@ -1,0 +1,119 @@
+* {
+  margin: 0%;
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+  font-family: "Lato", sans-serif;
+  /* font-weight: 400; */
+  color: gray;
+  box-sizing: border-box;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100vh;
+}
+
+/* left side */
+.left {
+  float: left;
+  padding-top: 20vh;
+  background-color: whitesmoke;
+}
+
+.login,
+.hello {
+  display: block;
+  height: 550px;
+  width: 450px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-bottom: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+#email,
+#password {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: lightgray;
+  padding: 16px;
+  border: none;
+}
+
+#forgot {
+  text-decoration: none;
+}
+
+form button {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 16px;
+  border: none;
+  background-color: purple;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.linethrough {
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.linethrough span {
+  background: whitesmoke;
+  padding: 0 3%;
+}
+
+input[type="radio"] {
+  border: 2px solid gray;
+  padding: 0.6em;
+  -webkit-appearance: none;
+  float: left;
+  margin-right: 5px;
+}
+
+#rem {
+  float: left;
+}
+
+#forgot {
+  float: right;
+}
+
+.social {
+  padding-bottom: 50px;
+  padding-top: 5px;
+}
+
+.fab {
+  margin: 12px;
+}
+
+/* right side */
+.right {
+  background-image: linear-gradient(black, purple);
+  float: right;
+  padding-top: 28vh;
+}
+
+.hello h1 {
+  color: gray;
+  margin-top: 10px;
+}
+
+.hello button {
+  background-color: transparent;
+  border: 2px solid #e7e7e7;
+  border-radius: 45px;
+  padding: 16px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 16px;
+}
