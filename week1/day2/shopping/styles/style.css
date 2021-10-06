@@ -46,11 +46,22 @@ ul a:hover {
 }
 
 .landing {
-  width: 50%;
-  position: absolute;
-  top: 35%;
-  left: 25%;
+  position: fixed;
   text-align: center;
+  height: 100%;
+  background-image: url("../assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 60px;
+  padding: 20vh 20vw;
+}
+
+.landing h1 {
+  color: var(--white);
+}
+.landing p {
+  color: var(--grey);
 }
 
 footer {
