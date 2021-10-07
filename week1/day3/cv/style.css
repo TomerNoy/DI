@@ -48,6 +48,7 @@
 
 .title span {
   font-weight: 700;
+  color: var(--grayD);
 }
 
 .title h1 {
@@ -79,6 +80,22 @@
 
 .contact {
   grid-area: contact;
+}
+
+.contactRow {
+  display: flex;
+  justify-content: space-between;
+}
+.contactRow a {
+  color: var(--cream);
+}
+
+.contact button {
+  background-color: var(--grayD);
+  border: none;
+  font-size: 30px;
+  color: var(--white);
+  margin-right: 16px;
 }
 
 .exp {
