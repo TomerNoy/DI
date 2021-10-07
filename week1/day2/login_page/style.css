@@ -3,7 +3,6 @@
   /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
   font-family: "Lato", sans-serif;
-  /* font-weight: 400; */
   color: gray;
   box-sizing: border-box;
 }
@@ -12,11 +11,11 @@
 .right {
   width: 50%;
   height: 100vh;
+  float: left;
 }
 
 /* left side */
 .left {
-  float: left;
   padding-top: 20vh;
   background-color: whitesmoke;
 }
@@ -30,7 +29,7 @@
   margin: 0 auto;
 }
 
-h1 {
+.login h1 {
   padding-bottom: 16px;
   color: black;
   font-weight: bold;
@@ -110,10 +109,18 @@ input[type="radio"] {
 
 .hello button {
   background-color: transparent;
-  border: 2px solid #e7e7e7;
+  border: 2px solid gray;
   border-radius: 45px;
   padding: 16px 30px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   margin: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  .left,
+  .right {
+    float: none;
+    width: 100%;
+  }
 }

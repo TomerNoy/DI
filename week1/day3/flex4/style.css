@@ -1,0 +1,49 @@
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
+* {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  position: absolute;
+  border: 3px solid red;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  flex: auto;
+}
+
+.flex div {
+  background-color: skyblue;
+  font-size: 8vh;
+  font-weight: bold;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#_1,
+#_3 {
+  width: 65%;
+}
+
+#_2 {
+  margin: 5px 0;
+  width: 100%;
+}

@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.grid {
+  padding: 10px 8px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-template-areas:
+    "a a a"
+    "b c d"
+    "b e e"
+    "f f g"
+    "h h h";
+  gap: 10px 8px;
+  text-align: center;
+}
+
+.grid div {
+  font-size: 15vh;
+}
+
+#_1 {
+  grid-area: a;
+  background-color: #b8336a;
+}
+#_2 {
+  grid-area: b;
+  background-color: #726ea8;
+}
+#_3 {
+  grid-area: c;
+  background-color: #7c8cc4;
+}
+#_4 {
+  grid-area: d;
+  background-color: #9fd2db;
+}
+#_5 {
+  grid-area: e;
+  background-color: #c490d2;
+}
+#_6 {
+  grid-area: f;
+  background-color: #b8336a;
+}
+#_7 {
+  grid-area: g;
+  background-color: #726ea8;
+}
+#_8 {
+  grid-area: h;
+  background-color: #7c8cc4;
+}
