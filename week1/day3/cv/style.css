@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 400;
 }
 
@@ -14,28 +14,28 @@
 }
 
 .grid {
+  color: var(--grayD);
   position: absolute;
   background-color: var(--white);
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template: 2fr 1fr 3fr 6fr / 1fr 2fr;
+  grid-template: 1fr 3fr / 1fr 2fr;
   grid-template-areas:
-    "pic title title"
-    "pic title title"
-    "contact exp exp"
-    "education exp exp";
+    'pic title title'
+    'side exp exp';
+  grid-template-rows: auto;
 }
 
-.grid div {
+.grid > div {
   padding: 16px;
 }
 
 .pic {
   grid-area: pic;
-  background-image: url("assets/photo.jpeg");
+  background-image: url('assets/photo.jpeg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
@@ -53,18 +53,22 @@
 
 .title h1 {
   font-size: 2.5em;
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-weight: 700;
 }
 
-.stack {
+/* .stack {
   grid-area: 2 / 1 / span 1 / span 3;
   background-color: var(--greenL);
   opacity: 0.5;
+} */
+.stack li {
+  /* font-size: calc(10px + 0.5vh); */
+  font-size: 12px;
 }
 
 .contact,
-.education {
+.side {
   background-color: var(--grayD);
   color: var(--white);
   /* display: grid; */
@@ -78,37 +82,61 @@
   color: var(--white);
 }
 
-.contact {
-  grid-area: contact;
-}
-
 .contactRow {
   display: flex;
   justify-content: space-between;
 }
 .contactRow a {
   color: var(--cream);
+  margin-bottom: 16px;
 }
 
 .contact button {
-  background-color: var(--grayD);
+  border-radius: 50px;
   border: none;
-  font-size: 30px;
-  color: var(--white);
-  margin-right: 16px;
+  font-size: 25px;
+  color: var(--grayD);
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
 }
 
 .exp {
   grid-area: exp;
 }
 
-.education {
-  grid-area: education;
+.side {
+  grid-area: side;
 }
 
-/* <a href=""><span style="font-weight: 700;">Phone</span> +972 54885 9596- <i class="fas fa-phone"></i></a>
-            <a href=""><span style="font-weight: 700;">Email</span> TomerNoy@outlook.com- <i
-                    class="fas fa-envelope"></i></a>
-            <a href=""><span style="font-weight: 700;">Phone</span> +972 54885 9596- <i
-                    class="fab fa-linkedin-in"></i></a>
-            <a href=""><span style="font-weight: 700;">Phone</span> +972 54885 9596- <i class="fab fa-github"></i></a> */
+.side > div {
+  text-align: end;
+  margin: 60px 16px 0px 16px;
+}
+
+.side > div hr {
+  border-color: var(--cream);
+}
+
+.side > div h1 {
+  color: var(--cream);
+}
+
+.skills ul {
+  padding: 0;
+}
+
+.skills li {
+  display: inline-block;
+  margin: 3px;
+  /* background-color: var(--grayD);
+  color: var(--gray); */
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 3px 10px;
+}
