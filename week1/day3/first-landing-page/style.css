@@ -1,0 +1,96 @@
+* {
+  margin: 0%;
+}
+
+.title {
+  text-align: center;
+}
+
+.stats ul {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 0;
+}
+.stats li {
+  flex-grow: 1;
+  width: 33.33px;
+  /* background-color: palevioletred; */
+}
+.stats h1 {
+  color: darkslateblue;
+}
+
+.stats h6 {
+}
+
+.cards {
+  display: flex;
+  text-align: center;
+}
+
+.cards > div {
+  margin: 10px;
+  box-shadow: 0px 0px 10px 0px lightgray;
+  border-radius: 8px;
+}
+
+.cards .card2 {
+  margin-top: 100px;
+}
+
+.cards .top {
+  padding: 30px;
+}
+
+.cards .card1 .center {
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    white 50%,
+    salmon 50%,
+    salmon 100%
+  );
+}
+
+.cards .card2 .center {
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    white 50%,
+    darkslateblue 50%,
+    darkslateblue 100%
+  );
+}
+
+.cards .card3 .center {
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    white 50%,
+    darkturquoise 50%,
+    darkturquoise 100%
+  );
+}
+
+.cards i {
+  font-size: 55px;
+}
+
+.cards .bottom {
+  color: white;
+  padding: 30px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.cards .card1 .bottom {
+  background-color: salmon;
+}
+.cards .card2 .bottom {
+  background-color: darkslateblue;
+}
+.cards .card3 .bottom {
+  background-color: darkturquoise;
+}
