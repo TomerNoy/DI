@@ -40,6 +40,10 @@ form [type='download'] {
   grid-area: button;
 }
 
+form [type='download'] {
+  margin-bottom: 120px; /* space to not overlap footer */
+}
+
 .topBar button:hover,
 form [type='download']:hover {
   background-color: cadetblue;
@@ -103,6 +107,22 @@ select {
 
 select {
   margin-bottom: 30px;
+}
+
+footer {
+  background-color: white;
+
+  padding: 10px;
+  margin: 0 30px 10px 0;
+  position: fixed;
+  border: 5px solid orange;
+  border-radius: 50px;
+  bottom: 0;
+  right: 0;
+}
+
+footer i {
+  color: gray;
 }
 
 @media all and (max-width: 800px) {
