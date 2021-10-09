@@ -1,0 +1,46 @@
+* {
+  margin: auto 0;
+}
+
+:root {
+  --orange: #f97100;
+  --cream: #fbb26d;
+  --brown: #a74a00;
+}
+
+#col1 {
+  background-color: var(--orange);
+  width: 30px;
+  height: 30px;
+  grid-area: col1;
+}
+
+#col2 {
+  background-color: var(--cream);
+  width: 30px;
+  height: 30px;
+  grid-area: col2;
+}
+
+#col3 {
+  background-color: var(--brown);
+  width: 30px;
+  height: 30px;
+  grid-area: col3;
+}
+
+#col4 {
+  background-color: var(--orange);
+  width: 30px;
+  height: 30px;
+  grid-area: col4;
+}
+
+.box {
+  display: grid;
+  grid-template: auto / auto;
+  grid-template-areas:
+    'col1 col2 col3 col4'
+    'col1 col2 col3 col4'
+    /*  */;
+}
