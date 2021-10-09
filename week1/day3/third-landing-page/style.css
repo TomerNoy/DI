@@ -17,6 +17,9 @@ body {
 /* ----nav----- */
 
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: white;
   box-shadow: 0px 0px 3px 0 gray;
   display: flex;
@@ -43,11 +46,20 @@ nav .logo {
   color: white;
 }
 
-nav > * {
+nav .left,
+nav .logo {
   /* border: 1px solid black; */
   margin: 10px 16px;
   text-decoration: none;
   color: var(--blue);
+}
+
+nav .right {
+  /* border: 1px solid black; */
+  margin-right: 16px;
+  text-decoration: none;
+  color: var(--blue);
+  margin-left: auto;
 }
 
 nav h1 span {
@@ -58,13 +70,14 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 nav li {
   /* border: 1px solid black; */
   display: inline-block;
   padding: 0px 16px;
+  /* margin-right: auto; */
 }
 
 nav li a {
@@ -104,7 +117,7 @@ nav li a.active {
 /* ----title----- */
 
 .title {
-  margin-top: 80px;
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -220,13 +233,33 @@ p#price {
   border-radius: 5px;
 }
 
-@media all and (max-width: 1050px) {
+@media all and (max-width: 1200px) {
+  nav {
+    flex-direction: column;
+  }
+  nav .right {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .title {
+    margin-top: 200px;
+  }
+}
+
+@media all and (max-width: 1000px) {
   .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media all and (max-width: 500px) {
   nav {
-    flex-direction: column;
+    font-size: 0.8em;
+  }
+  .title h1{
+    font-size: 1.5em;
   }
 }
