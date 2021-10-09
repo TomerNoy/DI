@@ -132,7 +132,7 @@ nav li a.active {
 }
 .title h4 {
   margin-right: 10px;
-  opacity: 0.5;
+  color: gray;
 }
 
 /* ----cards----- */
@@ -240,8 +240,12 @@ p#price {
   right: 0;
   bottom: 0;
   border-top-left-radius: 5px;
-  padding: 10px 16px;
+  padding: 16px 30px;
   color: white;
+}
+
+.chat i{
+  font-size: 25px;
 }
 
 @media all and (max-width: 1200px) {
