@@ -14,18 +14,20 @@ body {
   background-color: var(--bg);
 }
 
-/* ----bar----- */
+/* ----nav----- */
 
-.topBar {
+nav {
   background-color: white;
   box-shadow: 0px 0px 3px 0 gray;
   display: flex;
   align-items: center;
 }
 
-.logo {
+nav .logo {
   display: flex;
   gap: 5px;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .fa-map-marker {
@@ -41,38 +43,38 @@ body {
   color: white;
 }
 
-.topBar > * {
+nav > * {
   /* border: 1px solid black; */
   margin: 10px 16px;
   text-decoration: none;
   color: var(--blue);
 }
 
-.topBar h1 span {
+nav h1 span {
   font-weight: normal;
 }
 
-.topBar ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   flex-grow: 1;
 }
 
-.topBar li {
+nav li {
   /* border: 1px solid black; */
   display: inline-block;
   padding: 0px 16px;
 }
 
-.topBar li a {
+nav li a {
   color: var(--blue);
   opacity: 0.5;
 
   text-decoration: none;
 }
 
-.topBar li a.active {
+nav li a.active {
   /* border: 1px solid black; */
   opacity: 1;
 }
@@ -224,7 +226,7 @@ p#price {
     flex-direction: column;
     align-items: center;
   }
-  .topBar {
+  nav {
     flex-direction: column;
   }
 }
