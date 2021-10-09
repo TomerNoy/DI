@@ -1,21 +1,35 @@
 * {
   margin: 0%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
-
+body {
+  margin: 30px 0;
+  background: url('https://wallpaperboat.com/wp-content/uploads/2019/08/worldmap.jpg')
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .title {
   text-align: center;
+}
+
+.stats {
+  margin: 100px;
 }
 
 .stats ul {
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
   padding-left: 0;
 }
 .stats li {
-  flex-grow: 1;
-  width: 33.33px;
+  /* flex-grow: 1; */
+  width: 400px;
   /* background-color: palevioletred; */
 }
 .stats h1 {
@@ -28,20 +42,27 @@
 .cards {
   display: flex;
   text-align: center;
+  justify-content: center;
 }
 
 .cards > div {
-  margin: 10px;
+  margin: 0 30px;
   box-shadow: 0px 0px 10px 0px lightgray;
   border-radius: 8px;
+  width: 400px;
+  height: max-content;
 }
 
 .cards .card2 {
-  margin-top: 100px;
+  margin-top: 8vh;
 }
 
 .cards .top {
   padding: 30px;
+  text-align: start;
+  background-color: white;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 
 .cards .card1 .center {
@@ -75,7 +96,8 @@
 }
 
 .cards i {
-  font-size: 55px;
+  font-size: 80px;
+  border-radius: 50px;
 }
 
 .cards .bottom {
@@ -93,4 +115,29 @@
 }
 .cards .card3 .bottom {
   background-color: darkturquoise;
+}
+
+@media all and (max-width: 1200px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards .card2 {
+    margin-top: 0%;
+  }
+
+  .cards > div {
+    margin-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .stats ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stats ul li:nth-child(2) {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
 }
