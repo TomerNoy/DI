@@ -1,0 +1,41 @@
+* {
+  margin: auto 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --orange: #f97100;
+  --cream: #fbb26d;
+  --brown: #a74a00;
+}
+
+.box > * {
+  width: 30px;
+  height: 30px;
+}
+
+.box > *:nth-child(3n) {
+  background-color: var(--brown);
+}
+
+.box > *:nth-child(3n -2) {
+  background-color: var(--orange);
+}
+
+.box > *:nth-child(3n -1) {
+  background-color: var(--cream);
+}
+
+.box {
+  border: 1px solid gray;
+  padding: 2px;
+  position: absolute;
+  display: grid;
+  gap: 3px;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 1fr);
+}
