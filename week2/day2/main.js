@@ -35,21 +35,21 @@
 //----------------------------------------------------
 
 // exercise 4
-// const users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
-// const length = users.length;
+const users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
+const length = users.length;
 
-// switch (length) {
-//   case 0:
-//     console.log("no one is online");
-//     break;
-//   case 1:
-//     console.log(`user ${users[0]} is online`);
-//     break;
-//   case 2:
-//     console.log(`users ${users[0]} and ${users[1]} are online`);
-//     break;
-//   default:
-//     console.log(
-//       `${users[0]}, ${users[1]} and ${length - 2} more users are online`
-//     );  
-// }
+switch (length) {
+  case 0:
+    console.log("no one is online");
+    break;
+  case 1:
+    console.log(`user ${users[0]} is online`);
+    break;
+  case 2:
+    console.log(`users ${users[0]} and ${users[1]} are online`);
+    break;
+  default:
+    console.log(
+      `${users[0]}, ${users[1]} and ${length - 2} more users are online`
+    );  
+}
