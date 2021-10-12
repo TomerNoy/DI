@@ -76,7 +76,7 @@
 // --------------------------------------------------------------
 
 // exercise 6
-let details = { my: 'name', is: 'Rudolf', the: 'raindeer' };
+// let details = { my: 'name', is: 'Rudolf', the: 'raindeer' };
 // let val = '';
 // Object.keys(details).forEach((k) => val += `${k} ${details[k]} `);
 // console.log(val);
