@@ -86,3 +86,103 @@
 // const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 // let secret = names.map(e => e[0]).sort().join('');
 // console.log(secret);
+
+//###
+//### Exercises XP Gold
+//###
+
+// let building = {
+//   numberLevels: 4,
+//   numberOfAptByLevel: {
+//     "1": 3,
+//     "2": 4,
+//     "3": 9,
+//     "4": 2,
+//   },
+//   nameOfTenants: ["Sarah", "Dan", "David"],
+//   numberOfRoomsAndRent: {
+//     "Sarah": [3, 990],
+//     "Dan": [4, 1000],
+//     "David": [1, 500],
+//   },
+// }
+// console.log(building['numberLevels']);
+// console.log(building['numberOfAptByLevel'][1], building['numberOfAptByLevel'][3]);
+// console.log(building['nameOfTenants'][2], building['numberOfRoomsAndRent']['Dan'][0]);
+// const saraRent = building['numberOfRoomsAndRent']['Sarah'][1];
+// const davidRent = building['numberOfRoomsAndRent']['David'][1];
+// console.log(saraRent + davidRent, "vs", building['numberOfRoomsAndRent']['Dan'][1]);
+// while (saraRent + davidRent >= building['numberOfRoomsAndRent']['Dan'][1]) {
+//   building['numberOfRoomsAndRent']['Dan'][1]++;
+// }
+// console.log('Dan\'s rent now', building['numberOfRoomsAndRent']['Dan'][1]);
+// --------------------------------------------------------------
+
+// const numbers = [123, 8409, 100053, 333333333, 7];
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i] % 3 === 0);
+// }
+// --------------------------------------------------------------
+
+// let age = [20, 5, 12, 43, 98, 55];
+// let sum = 0;
+// for (let i = 0; i < age.length; i++) {
+//   sum += age[i];
+// }
+// console.log(sum);
+
+// let largest = age[0];
+// for (let i = 1; i < age.length; i++) {
+//   if (age[i] > largest) largest = age[i]
+// }
+// console.log(largest);
+// --------------------------------------------------------------
+
+//###
+//### Exercises XP Ninja
+//###
+// const obj1 = {
+//   FullName: 'jack lake', Mass: 75, Height: 170,
+//   bmi: function () {
+//     return (this.Mass / (this, this.Height * this, this.Height)) * 703
+//   }
+// };
+
+// const obj2 = {
+//   FullName: 'johnny', Mass: 75, Height: 169,
+//   bmi: function () {
+//     return (this.Mass / (this, this.Height * this, this.Height)) * 703
+//   }
+// };
+
+// function highestBMI(x, y) {
+//   const bmi1 = x.bmi(), bmi2 = y.bmi();
+//   if (bmi1 === bmi2) console.log('equal');
+//   else console.log(`${bmi1 > bmi2 ? x.FullName : y.FullName} has the highest BMI`);
+// }
+
+// highestBMI(obj1, obj2);
+// --------------------------------------------------------------
+
+// const gradesList = [49, 100, 55, 67];
+// function findAvg(gradesList) {
+//   let total = 0;
+//   for (let n in gradesList) {
+//     total += gradesList[n];
+//   }
+//   const avg = total / gradesList.length;
+//   console.log(avg);
+//   return avg;
+// }
+
+// function didPass(avg) {
+//   for (let val in gradesList) {
+//     if (gradesList[val] >= avg) {
+//       console.log('passed')
+//     } else {
+//       console.log('failed must repeat the course')
+//     }
+//   }
+// }
+
+// didPass(findAvg(gradesList));
