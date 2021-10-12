@@ -48,10 +48,41 @@
 // console.log(people);
 
 // exercise 3
-let val = Number(prompt("please enter a number"));
-// console.log (typeof val === number);
+// let num = prompt("enter a number");
+// while (typeof num === "string" && num !== null && num !== "" && !isNaN(Number(num))) {
+//   num = prompt("enter a new number");
+// }
+// --------------------------------------------------------------
 
-while (val < 10) {
-  let newVal = Number(prompt("please enter a number"));
-  val = newVal;
-}
+// exercise 4
+// const guestList = {
+//   randy: "Germany",
+//   karla: "France",
+//   wendy: "Japan",
+//   norman: "England",
+//   sam: "Argentina"
+// }
+
+// const student = prompt('please enter your name:').toLowerCase();
+// const keys = Object.keys(guestList), index = keys.indexOf(student);
+// console.log(index === -1 ? `Hi! I'm a guest.` :
+//   `Hi! I'm ${keys[index]}, and I'm from ${guestList[student]}.`);
+// --------------------------------------------------------------
+
+// exercise 5
+// const family = { key1: "val1", key2: "val2", key3: "val3" };
+// for (let x in family) console.log(x);
+// for (let x in family) console.log(family[x]);
+// --------------------------------------------------------------
+
+// exercise 6
+let details = { my: 'name', is: 'Rudolf', the: 'raindeer' };
+// let val = '';
+// Object.keys(details).forEach((k) => val += `${k} ${details[k]} `);
+// console.log(val);
+// --------------------------------------------------------------
+
+// exercise 7
+// const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+// let secret = names.map(e => e[0]).sort().join('');
+// console.log(secret);
