@@ -44,8 +44,7 @@
 
 .title {
   grid-area: title;
-  text-align: center;
-  /* background-color: var(--cream); */
+  margin: 45px 0px 0px 45px;
 }
 
 .title span {
@@ -143,10 +142,18 @@
   color: var(--cream);
 }
 
+.education #details {
+  font-size: 0.8em;
+}
+
 .languages li {
   direction: rtl;
   list-style-position: inside;
   padding: 5px;
+}
+
+.skills {
+  padding-bottom: 100px;
 }
 
 .skills ul {
@@ -163,4 +170,16 @@
   padding: 3px 10px;
   font-weight: bold;
   color: var(--grayD);
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    display: block;
+  }
+  .side div{
+    text-align: center;
+  }
+  .social{
+    justify-content: center;
+  }
 }
