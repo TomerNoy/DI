@@ -166,23 +166,15 @@
 
 // const gradesList = [49, 100, 55, 67];
 // function findAvg(gradesList) {
-//   let total = 0;
-//   for (let n in gradesList) {
-//     total += gradesList[n];
-//   }
-//   const avg = total / gradesList.length;
-//   console.log(avg);
-//   return avg;
+//     let total = 0;
+//     for (n of gradesList) total += n;
+//     const avg = total / gradesList.length;
+//     console.log(avg);
+//     return avg;
 // }
 
-// function didPass(avg) {
-//   for (let val in gradesList) {
-//     if (gradesList[val] >= avg) {
-//       console.log('passed')
-//     } else {
-//       console.log('failed must repeat the course')
-//     }
-//   }
-// }
+// didPass = avg => gradesList.forEach(
+//     v => console.log(v >= avg ? 'passed' : 'failed must repeat the course')
+// );
 
 // didPass(findAvg(gradesList));
