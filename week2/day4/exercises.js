@@ -151,3 +151,49 @@
 //     alert(`The car cost: $${car}, the hotel cost: $${hotel}, the plane tickets cost: $${plane}, total of $${total}`);
 // }
 // totalVacationCost();
+
+// 
+// ###### gold ######
+// 
+// const isBlank = val => val === null || val === undefined || val.length === 0;
+// console.log(isBlank(''));
+// ----------------------------------------------------------------------
+// const abbrevName = val => {
+//     const asList = val.split(' ');
+//     return result = `${asList[0]} ${asList.slice(1).map(e => e[0].toUpperCase()).join('.')}.`;
+// }
+
+// console.log(abbrevName("Robin Singh")); //--> "Robin S."
+// console.log(abbrevName("Robin Singh Peterson")); //--> "Robin S.P."
+// ----------------------------------------------------------------------
+// const swapCase = (val) => {
+//     let result = '';
+//     for (v of val) result += v.toUpperCase() === v ? v.toLowerCase() : v.toUpperCase();
+//     return result;
+// };
+
+// console.log(swapCase('tHE qUICK bROWN fOX'));
+// ----------------------------------------------------------------------
+
+const isOmnipresent = (val) => {
+    if (val === undefined || val === null || !Array.isArray(val) || val.length < 1) return false;
+    /// extract first elements
+    let candidates = ([]);
+    /// option 1 is array (could be empty)
+    /// option 2 is single item
+    let isList = true;
+
+
+
+
+    // console.log(Array.isArray(val[0]));
+    // if (!Array.isArray(val[0])) {
+    //     candidates.add()
+    // }
+}
+
+isOmnipresent([, 5, 4]);
+
+// to be continued...
+
+
