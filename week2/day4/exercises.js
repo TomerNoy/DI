@@ -175,25 +175,80 @@
 // console.log(swapCase('tHE qUICK bROWN fOX'));
 // ----------------------------------------------------------------------
 
-const isOmnipresent = (val) => {
-    if (val === undefined || val === null || !Array.isArray(val) || val.length < 1) return false;
-    /// extract first elements
-    let candidates = ([]);
-    /// option 1 is array (could be empty)
-    /// option 2 is single item
-    let isList = true;
+// const isOmnipresent = (val) => {
+//     if (val === undefined || !Array.isArray(val) || val.length < 1) return false;
+
+//     const simpleArray = val.map(e => e.toString().split(','));
+//     console.log(simpleArray);
+//     const firstElement = simpleArray[0], restOfElement = simpleArray.slice(1);
+
+//     let foundOmnipresent = false;
+
+//     for (x of firstElement) {
+//         let xFound = true;
+//         for (let i = 0; i < restOfElement.length; i++) {
+//             const found = restOfElement[i].includes(x);
+//             if (!found) {
+//                 xFound = false;
+//                 break;
+//             }
+//         }
+//         if (xFound) return true;
+//     }
+//     return false;
+// }
+
+// // !!! i believe there's an error with the examples on site !!!
+// console.log(isOmnipresent([[3, 4], [8, 3, 2], [3], [9, 3], [5, 3], [4, 3]]));
+// console.log(isOmnipresent([[[1, 1], [1, 3], [5, 1], [6, 1]], 1]));
+// console.log(isOmnipresent([[[1, 1], [1, 3], [5, 1], [6, 1]], 6]));
+// ----------------------------------------------------------------------
 
 
+// ### ninja
+// const random = Math.floor(Math.random() * 100) + 1;
+// console.log(random);
+// for (let i = 0; i < 100; i++) {
+//     if (i % 2 == 0) console.log(i);
+// }
+// ----------------------------------------------------------------------
 
+// const capitalize = arg => {
+//     let evens = '', odds = '';
+//     for (let i = 0; i < arg.length; i++) {
+//         if (i % 2 === 0) {
+//             evens += arg[i].toUpperCase();
+//             odds += arg[i];
+//         } else {
+//             odds += arg[i].toUpperCase();
+//             evens += arg[i];
+//         }
+//     }
+//     return [evens, odds];
+// };
 
-    // console.log(Array.isArray(val[0]));
-    // if (!Array.isArray(val[0])) {
-    //     candidates.add()
-    // }
-}
+// console.log(capitalize('abcdef'));
+// ----------------------------------------------------------------------
 
-isOmnipresent([, 5, 4]);
+// const isPalindrome = val => val.split('').reverse().join('') === val;
+// ----------------------------------------------------------------------
 
-// to be continued...
+// const biggestNumberInArray = arrayNumber => {
+//     /// remove strings
+//     const simpleList = arrayNumber.filter(e => !isNaN(e));
 
+//     let max = 0;
+//     for (e of simpleList) {
+//         if (e > max) max = e;
+//     }
+//     return max;
+// };
 
+// console.log(biggestNumberInArray([-1,0,3,100, 99, 2, 99]));
+// console.log(biggestNumberInArray(['a', 3, 4, 2]));
+// console.log(biggestNumberInArray([]));
+
+// ----------------------------------------------------------------------
+
+// const unique = arg => [...new Set(arg)];
+// console.log(unique([1,2,3,3,3,3,4,5]));

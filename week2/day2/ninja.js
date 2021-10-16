@@ -7,4 +7,22 @@
 // console.log(`age1 = ${age1}, age2 = ${age2} result = ${result}`);
 //------------------------------------------------
 
+// exercise 2:
+// const checkZip = (zip) => {
+//     if (zip.length !== 5) return false;
+//     for (l of zip.split('')) {
+//         if (isNaN(l) || l == ' ') return false;
+//     }
+//     return true;
+// }
 
+// with regex
+// const checkZipRegex = (zip) => /^(\d{5})$/.test(zip);
+
+// const zip = prompt('please enter your zip code');
+// console.log(checkZipRegex(zip) ? 'success' : 'error');
+
+// exercise 3
+// const zip = prompt('enter any word');
+// console.log(zip.replace(/[aeiouAEIOU]/g, ''));
+// console.log(zip.replace(/[aeiouAEIOU]/g, '*'));
