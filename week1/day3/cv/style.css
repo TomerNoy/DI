@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
 }
 
@@ -22,8 +22,8 @@
   display: grid;
   grid-template: 1fr 3fr / 1fr 2fr;
   grid-template-areas:
-    'pic title title'
-    'side exp exp';
+    "pic title title"
+    "side exp exp";
   grid-template-rows: auto;
 }
 
@@ -33,7 +33,7 @@
 
 .pic {
   grid-area: pic;
-  background-image: url('assets/photo.jpeg');
+  background-image: url("assets/photo.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -54,7 +54,7 @@
 
 .title h1 {
   font-size: 2.5em;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-weight: 700;
 }
 
@@ -111,6 +111,7 @@
   margin-left: 45px;
   margin-right: 45px;
   text-align: justify;
+  margin-bottom: 50px;
 }
 
 .exp h3 {
@@ -176,10 +177,10 @@
   .grid {
     display: block;
   }
-  .side div{
+  .side div {
     text-align: center;
   }
-  .social{
+  .social {
     justify-content: center;
   }
 }
