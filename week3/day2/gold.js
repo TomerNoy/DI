@@ -65,7 +65,7 @@ function addItem(e) {
     list.appendChild(li);
 }
 
-/// clear all button
+/// clear button
 const clear = document.createElement('button');
 clear.textContent = 'clear';
 root.appendChild(clear);

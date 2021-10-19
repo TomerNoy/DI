@@ -1,0 +1,35 @@
+body {
+  border-spacing: 10px;
+}
+
+.box {
+  background-color: lightgrey;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  height: 210px;
+  width: 210px;
+  border: 3px solid gray;
+  border-radius: 8px;
+}
+
+.element {
+  background-color: lightcyan;
+  height: 120px;
+  width: 120px;
+  border: 3px solid cyan;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.hold {
+  border: 3px solid blue;
+}
+
+.hovered {
+  background-color: lightpink;
+  border-style: dashed;
+}
+.invisible {
+  display: none;
+}

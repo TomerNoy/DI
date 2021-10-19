@@ -1,5 +1,5 @@
 let button = document.getElementById('lib-button');
-button.addEventListener('click', genStory);
+input.addEventListener('click', genStory);
 
 let shuffle = document.createElement('button');
 shuffle.textContent = 'shuffle';
