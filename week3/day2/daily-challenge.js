@@ -15,6 +15,9 @@ function genStory(e) {
     let verb = document.getElementById('verb').value;
     let place = document.getElementById('place').value;
 
+    if (noun === '' || adjective === '' || person === '' || verb === '' || place === '')
+        return alert('hey ! type in something in all of \'em');
+
     const stories = [
         `warning ! ${person} likes to ${verb} everyday in ${place} while touching his ${adjective} ${noun} !!!`,
         `every time ${person} ${verb} at ${place}, he is so ${adjective} he forgets his ${noun}`,
@@ -24,15 +27,9 @@ function genStory(e) {
 
     switch (e.target.id) {
         case 'lib-button':
-            if (noun === '' || adjective === '' || person === '' || verb === '' || place === '')
-                return alert('hey ! type in something');
             return document.getElementById('story').textContent = stories[0];
         case 'shuffle':
             const random = Math.floor(Math.random() * 4);
             return document.getElementById('story').textContent = stories[random];
-
     }
-
-
-
 }
