@@ -11,9 +11,5 @@ console.log(input.value);
 /// this works better
 input.addEventListener('input', () => {
     const found = input.value.match(/[a-zA-Z]/g);
-    if (found !== null) {
-        input.value = found.join('');
-    } else {
-        input.value = input.value.slice(0, -1);
-    }
+    found !== null ? input.value = found.join('') : input.value = input.value.slice(0, -1);
 });
