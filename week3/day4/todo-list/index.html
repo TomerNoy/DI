@@ -3,12 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <!-- <title></title> -->
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <script
+      src="https://kit.fontawesome.com/ae1d3a79b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="" async defer></script>
+    <h1>TO-DO LIST</h1>
+    <div class="panel">
+      <form id="mytodo">
+        <input
+          type="text"
+          id="input"
+          name="input"
+          value=""
+          placeholder="add task"
+        />
+        <input type="button" id="submit" name="submit" value="ADD" />
+      </form>
+    </div>
+    <div class="listTasks"></div>
+
+    <script src="main.js" async defer></script>
   </body>
 </html>

@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(red, purple);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin: 30px;
+}
+
+.panel,
+.listTasks {
+  background-color: white;
+  width: 400px;
+  margin: auto;
+}
+
+.listTasks {
+  height: fit-content;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-around;
+}
+
+.panel input {
+  font-size: 1.3em;
+  background-color: transparent;
+  border: none;
+}
+
+/* .panel input[type="text"] {
+} */
+
+/* .panel input[type="button"] {
+} */
+
+form {
+  padding: 20px;
+}
+
+.listTasks {
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.task {
+  display: flex;
+  font-size: 1.3em;
+}
