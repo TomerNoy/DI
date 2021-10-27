@@ -24,38 +24,50 @@ h1 {
   background-color: coral;
 }
 
-#about-left-box{
+#about-left-box {
   border-radius: 50%;
 }
 
 header {
   background-image: url(images/headerback.jpg);
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-#about-right-box{
+#about-right-box {
   border-left: 3px solid teal;
 }
 
+#about-left-box {
+  width: 320px;
+  height: 300px;
+}
+
 .jumbotron {
-  position: fixed;
-  z-index: 1;
+  position: absolute;
   top: 25vh;
+  width: 85vw;
+  
   left: 10%;
-  right: 10%;
+}
+
+.card {
+  /* margin: 0px; */
 }
 
 .btn {
   background-color: coral;
   color: white;
 }
+.our-team img {
+  width: 100%;
+}
 
 #overlay {
-  position: relative;
+  /* position: relative; */
   /* display: block; */
   width: 100%;
   height: 100%;
@@ -64,7 +76,7 @@ header {
   right: 0;
   bottom: 0;
   background-color: white;
-  opacity: 0.6; /* Black background with opacity */
+  opacity: 0.9; /* Black background with opacity */
   /* Specify a stack order in case you're using a different order for other elements */
   z-index: -10;
 
