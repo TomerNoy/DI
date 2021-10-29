@@ -1,8 +1,23 @@
-const createCalendar = (year, month) => {
-  const date = new Date(year, month);
-  console.log(date);
 
-  const days = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
+
+const createCalendar = (year, month) => {
+  const daysList = getDaysInMonth(month, year);
+
+  const monthGrid = { MO: [], TU: [], WE: [], TH: [], FR: [], SA: [], SU: [] };
+
+  daysList.forEach(e => {
+    const day = e.getDay();
+    const date = e.getDate();
+    const days = Object.keys(monthGrid);
+
+    console.log(day);
+
+
+
+    // monthGrid[days[day]].push(date);
+  });
+
+  console.log(monthGrid['MO']);
 
   const calendar = document.createElement("div");
   calendar.classList.add("calendar");
@@ -13,7 +28,7 @@ const createCalendar = (year, month) => {
   table.style.backgroundColor = "lightgray";
   const panelRow = document.createElement("tr");
 
-  days.forEach((e) => {
+  Object.keys(monthGrid).forEach((e) => {
     const day = document.createElement("th");
     day.textContent = e;
     day.style.padding = "16px";
@@ -23,37 +38,23 @@ const createCalendar = (year, month) => {
     panelRow.appendChild(day);
   });
 
-  //   const headFirstName = document.createElement("th");
-  //   const headLastName = document.createElement("th");
-
-  //   headFirstName.textContent = "MO";
-
-  //   panelRow.appendChild(headFirstName);
-  //   panelRow.appendChild(headLastName);
-
   table.appendChild(panelRow);
-
   calendar.appendChild(table);
 
   document.body.appendChild(calendar);
 };
 
-createCalendar(2001, 12);
-console.log("ok");
 
-{
-  /* <table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-  </tr>
-</table> */
+function getDaysInMonth(month, year) {
+  month += -1;
+  var date = new Date(year, month, 1);
+  var days = [];
+  while (date.getMonth() === month) {
+    days.push(new Date(date)); //todo
+    date.setDate(date.getDate() + 1);
+  }
+  return days;
 }
+
+
+createCalendar(2021, 10);
