@@ -1,0 +1,29 @@
+* {
+  margin: auto 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://wallpapercave.com/wp/YMDSifI.jpg);
+  background-size: cover;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 140px);
+  grid-gap: 3rem;
+}
+
+.boxes > div {
+  flex-direction: column;
+  text-align: center;
+  height: 140px;
+  border: 2px solid goldenrod;
+  color: goldenrod;
+  padding: 30px;
+}
+
+.boxes > div h1 {
+  padding: 5px;
+  color: white;
+}
