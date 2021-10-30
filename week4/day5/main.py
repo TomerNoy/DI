@@ -1,4 +1,5 @@
 
+import random
 grid = []
 
 
@@ -32,6 +33,8 @@ print('Welcome to TIC TAC TOE!')
 display_board()
 
 # check if all grid was filled
+
+
 def isGridFilled():
     for row in grid:
         for val in row:
