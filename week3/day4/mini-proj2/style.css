@@ -12,6 +12,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, 140px);
   grid-gap: 3rem;
+  margin: 10vh 5vw;
 }
 
 .boxes > div {
@@ -21,6 +22,7 @@ body {
   border: 2px solid goldenrod;
   color: goldenrod;
   padding: 30px;
+  background-color: rgba(1, 1, 1, 0.5);
 }
 
 .boxes > div h1 {
