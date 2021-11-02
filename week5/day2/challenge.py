@@ -51,6 +51,7 @@ class DNA:
                 print('i didn\'t mutate')
 
 
-chromo = Chromosome()
-chromo.mutate()
-print(chromo.genes)
+# chromo = Chromosome()
+# chromo.mutate()
+# print(chromo.genes)
+
