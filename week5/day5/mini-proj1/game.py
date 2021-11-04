@@ -2,7 +2,6 @@ import random
 
 
 class Game:
-
     hands = ["rock", "paper", "scissors"]
 
     def get_user_item(self):
@@ -20,37 +19,33 @@ class Game:
 
     def get_game_result(self, user_item, computer_item):
         if user_item == computer_item:      # draw
-            return 'draw'
+            return 'draw!'
 
         if user_item == "rock":
-            return "win" if computer_item == "scissors" else "loss"
+            return "win!" if computer_item == "scissors" else "loss"
 
         if user_item == "paper":
-            return "win" if computer_item == "stone" else "loss"
+            return "win!" if computer_item == "stone" else "loss"
 
         if user_item == "scissors":
-            return "win" if computer_item == "paper" else "loss"
+            return "win!" if computer_item == "paper" else "loss"
 
     def play(self):
-        '''
-        the function that will be called from outside the class (ie. from rock-paper-scissors.py). 
-        It will do 3 things:
-            1. Get the user’s item (rock/paper/scissors) and remember it
+        hand = self.get_user_item()
+        if hand == None:
+            print('Goodbye !')
+            return
 
-            2. Get a random item for the computer (rock/paper/scissors) and remember it
+        com_hand = self.get_computer_item()
 
-            3. Determine the results of the game by comparing the user’s item and the computer’s item
-                1. Print the output of the game; something like this: 
-                    “You selected rock. The computer selected paper. You lose”, 
-                    “You selected scissors. The computer selected scissors. You drew!”
+        result = self.get_game_result(hand, com_hand)
 
-                2. Return the results of the game as a string: win;draw;loss;, 
-                    where win means that the user has won, draw means the user and the computer got the same item, 
-                    and loss means that the user has lost.
-        '''
-    pass
+        print(
+            f'You selected {hand}. The computer selected {com_hand}. You {result}')
+        return result
 
 
 game = Game()
+game.play()
 # game.get_user_item()
-game.get_computer_item()
+# game.get_computer_item()
