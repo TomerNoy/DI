@@ -16,7 +16,7 @@ class Text():
         self.val = val
 
     def freq(self, word):
-        words_list = self.val.split(' ')
+        words_list = self.val.split()
         count = words_list.count(word)
         if count < 1:
             return None
@@ -24,7 +24,7 @@ class Text():
             return f'found {count} "{word}" in text'
 
     def most_common_word(self):
-        word_list = self.val.split(' ')
+        word_list = self.val.split()
         unique_words_list = self.__get_unique_sorted(word_list)
 
         def how_many(w): return word_list.count(
@@ -33,7 +33,7 @@ class Text():
         return most_common
 
     def unique_list(self):
-        word_list = self.val.split(' ')
+        word_list = self.val.split()
         unique_words_list = self.__get_unique_sorted(word_list)
         # most equally unique words
         def how_many(w): return word_list.count(
@@ -80,7 +80,7 @@ class TextModification(Text):
         return ''.join(punctuationless)
 
     def rm_stop_words(self):
-        word_list = self.val.split(' ')
+        word_list = self.val.split()
 
         for word in word_list:
             if word in stopwords("en"):
@@ -103,6 +103,6 @@ text3.rm_special_char()
 text4 = TextModification.from_file('the_stranger.txt')
 
 
-print(text4.rm_punctuation())
-print(text4.rm_stop_words())
-print(text4.rm_special_char())
+# print(text4.rm_punctuation())
+# print(text4.rm_stop_words())
+# print(text4.rm_special_char())
