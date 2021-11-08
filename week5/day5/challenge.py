@@ -82,7 +82,6 @@ class Deck():
         random.shuffle(self.cards)
 
     def deal(self):
-
         print(f'dealing {self.cards[-1]}')
         del self.cards[-1]
 

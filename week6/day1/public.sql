@@ -1,0 +1,6 @@
+-- SELECT * FROM items;
+-- SELECT * FROM items WHERE price > 80;
+-- SELECT * FROM items WHERE price <= 300;
+-- SELECT * FROM customers WHERE lname = 'Smith';
+-- SELECT * FROM customers WHERE lname = 'Jones';
+-- SELECT * FROM customers WHERE lname != 'Scott';

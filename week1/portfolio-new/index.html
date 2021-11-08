@@ -27,43 +27,33 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- header -->
     <header>
-      <h3>Tomer Noy</h3>
-
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item">
-            <a href="#projects" class="nav__link">My projects</a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About me</a>
-          </li>
-          <li class="nav__item">
-            <a href="#work" class="nav__link">My Work</a>
-          </li>
-        </ul>
-      </nav>
+      <ul id="links">
+        <li class="active">
+          <a href="#home">Tomer Noy</a>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </header>
 
     <!-- Introduction -->
     <section class="intro" id="home">
       <div class="wordCloud">
-        <div id="program">program</div>
+        <div id="awareness">awareness</div>
         <div id="security">security</div>
         <div id="code">code</div>
-        <div id="terminal">terminal</div>
+        <div id="science">science</div>
         <div id="learn">learn</div>
         <div id="solution">solution</div>
         <div id="challenge">challenge</div>
-        <div id="software">software</div>
-        <div id="algorithm">algorithm</div>
-        <div id="development">develop</div>
+        <div id="imagination">imagination</div>
+        <div id="dedication">dedication</div>
+        <div id="collaboration">collaboration</div>
         <div id="maintenance">maintenance</div>
-        <div id="functions">functions</div>
+        <div id="creativity">creativity</div>
       </div>
     </section>
 
@@ -71,33 +61,31 @@
     <section class="my-projects" id="projects">
       <h2 class="section__title section__title--projects">Projects</h2>
       <div class="projects">
-        <div class="service">
-          <h3>Kap & Roni</h3>
+        <div class="project">
           <img src="img/kapnroni.png" alt="" />
-          <p>
-            Snakes and ladders type of game only it's based on response speed
-          </p>
-          <p>Made with Flutter</p>
+          <div class="project__content">
+            <h3 class="">Kap & Roni</h3>
+            <p>
+              Snakes and ladders type of game, based on response speed
+            </p>
+            <h5>Flutter</h5>
+          </div>
         </div>
 
-        <!-- / service -->
-
-        <div class="service">
-          <h3>DiamNet</h3>
+        <div class="project">
           <img src="img/diamnet.png" alt="" />
-          <p>
-            Cross platform app for the diamond trading industry
-          </p>
-          <p>Made with Flutter, Node.js and MongoDB </p>
+          <div class="project__content">
+            <h3>DiamNet</h3>
+            <p>Cross platform app for the diamond trading industry</p>
+            <h5>Flutter, Node.js, MongoDB</h5>
+          </div>
         </div>
-        <!-- / service -->
       </div>
-      <!-- / projects -->
     </section>
 
     <!-- About me -->
     <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">Who I am</h2>
+      <h2 class="section__title section__title--about">About Me</h2>
       <p class="section__subtitle section__subtitle--about">
         Designer & developer based out of NYC
       </p>
@@ -118,7 +106,7 @@
       </div>
 
       <img
-        src="img/dev-jane-02.jpg"
+        src="img/me.jpg"
         alt="Jane leaning against a bus"
         class="about-me__img"
       />
@@ -127,58 +115,32 @@
     <!-- Contact -->
 
     <section class="contact" id="contact">
-      <!-- <div class="about-me__body"> -->
       <h2 class="section__title section__title--contact">Contact</h2>
       <div class="form">
         <form action="#">
+          <input type="text" id="name" name="name" placeholder="name" />
           <div class="row">
-            <div class="col-25">
-              <label for="name">Name</label>
-            </div>
-            <div class="col-75">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your name.."
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="email">Email</label>
-            </div>
-            <div class="col-75">
-              <input type="email" id="email" name="email" placeholder="email" />
-            </div>
+            <input type="email" id="email" name="email" placeholder="email" />
           </div>
 
-          <div class="row">
-            <div class="col-25">
-              <label for="subject">Subject</label>
-            </div>
-            <div class="col-75">
-              <textarea
-                id="subject"
-                name="subject"
-                placeholder="Write something.."
-                style="height: 200px"
-              ></textarea>
-            </div>
-          </div>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="subject"
+            style="height: 200px"
+          ></textarea>
           <br />
-          <div class="row">
-            <input type="submit" value="Submit" />
-          </div>
+          <input type="submit" value="Submit" />
         </form>
       </div>
-      <!-- </div> -->
     </section>
 
     <!-- Footer -->
     <footer class="footer">
       <!-- replace with your own email address -->
-      <a href="mailto:hello@jane.dev" class="footer__link">hello@jane.dev</a>
+      <a href="mailto:tomernoy@outlook.com" class="footer__link"
+        >tomernoy@outlook.com</a
+      >
       <ul class="social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://codepen.io">
@@ -203,6 +165,6 @@
       </ul>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

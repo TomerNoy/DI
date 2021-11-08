@@ -1,0 +1,2 @@
+-- SELECT COUNT(*) FROM actors;
+-- blank fields will through an err because all fields are defind as not null

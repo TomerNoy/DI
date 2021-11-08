@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* Custom Properties, update these for your own design */
+/* Root */
 
 :root {
   --ff-primary: 'Lora', serif;
@@ -23,6 +23,8 @@
   --col4: #b5838d;
   --col5: #6d6875;
 
+  --bg-trans: rgba(255, 255, 255, 0.25);
+
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -35,18 +37,19 @@
 @media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h2: 3rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
 }
+.active {
+  color: var(--col4);
+}
+/* General */
 
-/* General styles */
-
-/* endable this to add smooth scrolling */
-/* html {
-    scroll-behavior: smooth;
-} */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--clr-light);
@@ -146,132 +149,78 @@ h3 {
   margin-bottom: 2em;
 }
 
-/* header */
-
+/* header ------------------------------------- */
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
-}
-
-.nav {
   position: fixed;
-  background: var(--clr-dark);
-  color: var(--clr-light);
+  padding: 18px 10%;
+  background-color: var(--bg-trans);
+  -webkit-backdrop-filter: blur(0.5em);
+  backdrop-filter: blur(0.5em);
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   z-index: 100;
-
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+  /* border: 1px solid gray; */
 }
 
-.nav__list {
+header ul {
   list-style: none;
   display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
   margin: 0;
   padding: 0;
 }
 
-.nav__link {
+header li:first-child {
+  flex-grow: 1;
+}
+
+header li:first-child a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header li:not(:first-child) {
+  width: 120px;
+  text-align: center;
+}
+
+header a {
   color: inherit;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-h2);
   text-decoration: none;
+  transition: 0.3s;
 }
 
-.nav__link:hover {
+header a:hover {
   color: var(--clr-accent);
-}
-
-.nav-toggle {
-  padding: 0.5em;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  right: 1em;
-  top: 1em;
-  z-index: 1000;
-}
-
-.nav-open .nav {
-  transform: translateX(0);
-}
-
-.nav-open .nav-toggle {
-  position: fixed;
-}
-
-.nav-open .hamburger {
-  transform: rotate(0.625turn);
-}
-
-.nav-open .hamburger::before {
-  transform: rotate(90deg) translateX(-6px);
-}
-
-.nav-open .hamburger::after {
-  opacity: 0;
-}
-
-.hamburger {
-  display: block;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  background: var(--clr-accent);
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.hamburger::before {
-  top: 6px;
-}
-.hamburger::after {
-  bottom: 6px;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 /*  Intro section  */
-
 .intro {
-  position: relative;
+  padding-top: 180px;
   height: 600px;
+  width: min-content;
+  margin: 0 auto;
 }
 
-@media (min-width: 600px) {
-  .intro {
-    width: min-content;
-    margin: 0 auto;
+@media (max-width: 700px) {
+  header li:first-child a {
+    font-size: 1.5rem;
+  }
+
+  header li:not(:first-child) {
+    width: 15vw;
   }
 }
 
-/*  My projects section  */
+/* projects ---------------------------------------- */
 
 .my-projects {
   background-color: var(--clr-dark);
-  background-image: url(../img/services-bg.jpg);
+  background-image: url(https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_960_720.jpg);
   background-size: cover;
-  /* background-blend-mode: multiply; */
+  background-blend-mode: multiply;
   color: var(--clr-light);
   text-align: center;
 }
@@ -293,39 +242,62 @@ header {
 
 .projects {
   margin-bottom: 4em;
-  /* border: 1px solid red; */
+  display: flex;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: start;
 }
 
-.service {
-  /* border: 1px solid red; */
-  max-width: 400px;
+.project {
   margin: 0 auto;
-  /* padding: 16px; */
-  /* display: flex;
+  max-width: 450px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition-duration: 0.3s;
-  background-color: var(--clr-light); */
+  background-color: var(--bg-trans);
+  -webkit-backdrop-filter: blur(0.5em);
+  backdrop-filter: blur(0.5em);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
-.service > img {
-  margin: 0 auto;
-  border-radius: 8px;
+.project__content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@media (min-width: 800px) {
+.project img {
+  max-width: 200px;
+  max-height: 400px;
+  float: left;
+  border-radius: 8px 0 0 8px;
+  -webkit-border-radius: 8px 0 0 8px;
+  -moz-border-radius: 8px 0 0 8px;
+  -ms-border-radius: 8px 0 0 8px;
+  -o-border-radius: 8px 0 0 8px;
+}
+
+@media (max-width: 1050px) {
   .projects {
-    display: flex;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: column;
   }
-
-  .service + .service {
-    margin-left: 2em;
+  .project:last-child {
+    margin-top: 2rem;
   }
 }
 
+@media (max-width: 550px) {
+  /* .projects img {
+    float: none;
+    width: 70vw;
+    max-height: none;
+    max-width: none;
+  } */
+}
+/* about ---------------------------------------- */
 .about-me,
 .contact {
   max-width: 1000px;
@@ -463,115 +435,166 @@ header {
 
 .wordCloud {
   display: grid;
+  gap: 10px;
   grid-template:
-    '. program code .'
-    '. program software security'
-    'algorithm functions functions terminal'
-    '. development challenge solution'
-    '. maintenance learn solution';
+    '.              .              awareness     code                  security     . .'
+    '.              .              awareness     imagination    security     . .'
+    '.     dedication     awareness     creativity    creativity  creativity     science'
+    '.  .  collaboration collaboration solution    challenge     challenge'
+    '.              maintenance    maintenance   learn         solution    .     .'
+    '.              .              .             .             solution    .     .';
 }
 
 .wordCloud > div {
   transition: 0.3s;
+  width: min-content;
+  height: min-content;
+  /* border: 1px solid gray; */
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
 }
 
 .wordCloud > div:hover {
   padding: 20px;
   box-shadow: inset 5px 5px 30px 1px gray;
   border-radius: 10px;
-
+  cursor: crosshair;
   /* -webkit-transform: rotateZ(-15deg);
   -ms-transform: rotateZ(-15deg);
   transform: rotateZ(-15deg); */
 }
 
-#program {
+#awareness {
   color: var(--col1);
-  -webkit-transform: rotate(270deg);
   font-size: 2em;
-  grid-area: program;
-  padding-top: 50px;
+  grid-area: awareness;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  text-align: center;
+
+  /* position: static; */
+  /* width: 100px; */
+  /* transform-origin: center center; */
+
+  /* align-self: center; */
+  /* justify-self: right; */
 }
 #security {
   color: var(--col2);
-  text-align: left;
-  font-size: 1.5em;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  font-size: 0.9em;
+  font-weight: bold;
   grid-area: security;
   align-self: flex-end;
 }
 #code {
   color: var(--col3);
-  text-align: left;
   font-size: 2.5em;
   font-weight: bold;
   grid-area: code;
 }
-#terminal {
+#science {
   color: var(--col4);
   font-size: 2.3em;
-  grid-area: terminal;
+  grid-area: science;
 }
 #learn {
   color: var(--col5);
   grid-area: learn;
-  font-size: 4em;
+  font-size: 3em;
 }
 #solution {
   color: var(--col1);
-  -webkit-transform: rotate(90deg);
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
   font-size: 2.5em;
   grid-area: solution;
-  padding-top: 60px;
+  /* transform-origin: center left; */
 }
 #challenge {
   color: var(--col2);
   font-size: 1.3em;
   grid-area: challenge;
+  align-self: center;
 }
 
-#software {
+#imagination {
   color: var(--col3);
   font-size: 2em;
-  grid-area: software;
-  text-align: left;
+  grid-area: imagination;
 }
 
-#algorithm {
+#dedication {
   color: var(--col4);
-  grid-area: algorithm;
+  grid-area: dedication;
 }
-#development {
+#collaboration {
   color: var(--col5);
   font-size: 2em;
-  /* text-align: right; */
-  grid-area: development;
+  grid-area: collaboration;
+  justify-self: flex-end;
 }
 #maintenance {
   color: var(--col1);
-  /* font-size: 1em; */
-  text-align: right;
   grid-area: maintenance;
+  justify-self: flex-end;
 }
 
-#functions {
+#creativity {
   color: var(--col2);
-  text-align: right;
   font-size: 4em;
-  grid-area: functions;
+  grid-area: creativity;
 }
 
-/* this is from website */
+@media (max-width: 600px) {
+  .intro {
+    padding-top: 170px;
+    height: 500px;
+    width: min-content;
+    margin: 0 auto;
+  }
+
+  .wordCloud {
+    gap: 5px;
+  }
+
+  #awareness,
+  #collaboration {
+    font-size: 1.5em;
+  }
+
+  #science {
+    font-size: 1em;
+  }
+  #learn {
+    font-size: 2em;
+  }
+  #solution,
+  #imagination {
+    font-size: 1.5em;
+  }
+
+  #creativity {
+    font-size: 2.8em;
+  }
+}
+
+/* contact ------------------------------------------ */
+
 input[type='text'],
 input[type='email'],
 select,
 textarea {
   width: 100%;
   padding: 12px;
-  /* border: 1px solid var(--col3); */
-  border: none;
+  border: 1px solid gray;
+  /* border: none; */
   background-color: antiquewhite;
   border-radius: 4px;
   resize: vertical;
+  margin: 8px 0;
 }
 
 label {
@@ -620,7 +643,7 @@ input[type='submit']:hover {
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .col-25,
   .col-75,
   input[type='submit'] {
