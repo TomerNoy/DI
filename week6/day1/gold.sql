@@ -1,0 +1,4 @@
+-- select first_name, last_name, birth_date from students order by last_name limit 4;
+-- Fetch the details of the youngest student.
+-- select * from students order by birth_date limit 1;
+-- select * from students order by birth_date LIMIT 3 OFFSET 2;
