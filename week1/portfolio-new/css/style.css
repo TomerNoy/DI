@@ -13,17 +13,14 @@
   --fw-reg: 400;
   --fw-bold: 700;
 
-  --clr-light: #fff;
-  --clr-dark: #6d6875;
-  --clr-accent: #b5838d;
+  --col1: #cb997e;
+  --col2: #ddbea9;
+  --col3: #b7b7a4;
+  --col4: #a5a58d;
+  --col5: #6b705c;
+  --col6: #20221c;
 
-  --col1: #ffcdb2;
-  --col2: #ffb4a2;
-  --col3: #e5989b;
-  --col4: #b5838d;
-  --col5: #6d6875;
-
-  --bg-trans: rgba(255, 255, 255, 0.25);
+  --bg-trans: rgba(255, 255, 255, 0.35);
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -43,7 +40,7 @@
   }
 }
 .active {
-  color: var(--col4);
+  color: var(--col1);
 }
 /* General */
 
@@ -52,8 +49,8 @@ html {
 }
 
 body {
-  background: var(--clr-light);
-  color: var(--clr-dark);
+  background: white;
+  color: var(--col5);
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
@@ -74,29 +71,8 @@ strong {
 }
 
 :focus {
-  outline: 3px solid var(--clr-accent);
+  outline: 3px solid var(--col1);
   outline-offset: 3px;
-}
-
-/* Buttons */
-
-input[type='submit'] {
-  display: inline-block;
-  padding: 0.5em 2.5em;
-  background: var(--clr-accent);
-  color: var(--clr-dark);
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: var(--fw-bold);
-  transition: transform 200ms ease-in-out;
-  border-radius: 8px;
-}
-
-input[type='submit']:hover {
-  transform: scale(1.1);
 }
 
 /* Typography */
@@ -137,19 +113,20 @@ h3 {
 
 .section__subtitle--intro,
 .section__subtitle--about {
-  background: var(--clr-accent);
+  background: var(--col1);
   padding: 0.25em 1em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
 }
 
 .section__subtitle--work {
-  color: var(--clr-accent);
+  color: var(--col1);
   font-weight: var(--fw-bold);
   margin-bottom: 2em;
 }
 
-/* header ------------------------------------- */
+/* header #################################################### */
+
 header {
   position: fixed;
   padding: 18px 10%;
@@ -176,7 +153,7 @@ header li:first-child {
 
 header li:first-child a {
   font-size: 2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 header li:not(:first-child) {
@@ -185,23 +162,19 @@ header li:not(:first-child) {
 }
 
 header a {
-  color: inherit;
+  color: var(--col6);
   text-decoration: none;
   transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 
 header a:hover {
-  color: var(--clr-accent);
+  color: var(--col1);
   font-size: 1.25rem;
   font-weight: bold;
-}
-
-/*  Intro section  */
-.intro {
-  padding-top: 180px;
-  height: 600px;
-  width: min-content;
-  margin: 0 auto;
 }
 
 @media (max-width: 700px) {
@@ -213,20 +186,195 @@ header a:hover {
     width: 15vw;
   }
 }
+/* intro ##################################################### */
 
-/* projects ---------------------------------------- */
+.wordCloud {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    '.              .              awareness     code                  security     . .'
+    '.              .              awareness     imagination    security     . .'
+    '.     dedication     awareness     creativity    creativity  creativity     science'
+    '.  .  collaboration collaboration solution    challenge     challenge'
+    '.              maintenance    maintenance   learn         solution    .     .'
+    '.              .              .             .             solution    .     .';
+}
 
+.wordCloud > div {
+  width: min-content;
+  height: min-content;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.wordCloud > div:hover {
+  padding: 20px;
+  box-shadow: inset 5px 5px 30px 1px gray;
+  border-radius: 10px;
+  cursor: crosshair;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#awareness {
+  color: var(--col3);
+  font-size: 2em;
+  grid-area: awareness;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  text-align: center;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+#security {
+  color: var(--col3);
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  font-size: 0.9em;
+  font-weight: bold;
+  grid-area: security;
+  align-self: flex-end;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+#code {
+  color: var(--col4);
+  font-size: 2.5em;
+  font-weight: bold;
+  grid-area: code;
+}
+#science {
+  color: var(--col);
+  font-size: 2.3em;
+  grid-area: science;
+}
+#learn {
+  color: var(--col5);
+  grid-area: learn;
+  font-size: 3em;
+}
+#solution {
+  color: var(--col4);
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  font-size: 2.5em;
+  grid-area: solution;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+#challenge {
+  color: var(--col);
+  font-size: 1.3em;
+  grid-area: challenge;
+  align-self: center;
+}
+
+#imagination {
+  color: var(--col1);
+  font-size: 2em;
+  grid-area: imagination;
+}
+
+#dedication {
+  color: var(--col4);
+  grid-area: dedication;
+}
+#collaboration {
+  color: var(--col3);
+  font-size: 2em;
+  grid-area: collaboration;
+  justify-self: flex-end;
+}
+#maintenance {
+  color: var(--col2);
+  grid-area: maintenance;
+  justify-self: flex-end;
+}
+
+#creativity {
+  color: var(--col1);
+  font-size: 4em;
+  grid-area: creativity;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    padding-top: 170px;
+    height: 500px;
+    width: min-content;
+    margin: 0 auto;
+  }
+
+  .wordCloud {
+    gap: 5px;
+  }
+
+  #awareness,
+  #collaboration {
+    font-size: 1.5em;
+  }
+
+  #science {
+    font-size: 1em;
+  }
+  #learn {
+    font-size: 2em;
+  }
+  #solution,
+  #imagination {
+    font-size: 1.5em;
+  }
+
+  #creativity {
+    font-size: 2.8em;
+  }
+}
+
+.intro {
+  padding-top: 160px;
+  height: 620px;
+  width: min-content;
+  margin: 0 auto;
+}
+
+@media (max-height: 800px) {
+  .intro {
+    padding-top: 100px;
+    height: 500px;
+  }
+}
+/* proj ###################################################### */
 .my-projects {
-  background-color: var(--clr-dark);
+  background-color: gray;
   background-image: url(https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_960_720.jpg);
   background-size: cover;
   background-blend-mode: multiply;
-  color: var(--clr-light);
+  color: white;
   text-align: center;
 }
 
 .section__title--projects {
-  color: var(--clr-accent);
+  color: var(--col1);
   position: relative;
 }
 
@@ -236,7 +384,7 @@ header a:hover {
   width: 2em;
   height: 1px;
   margin: 0.5em auto 1em;
-  background: var(--clr-light);
+  background: white;
   opacity: 0.25;
 }
 
@@ -252,10 +400,10 @@ header a:hover {
 .project {
   margin: 0 auto;
   max-width: 450px;
-  border-radius: 8px;
   background-color: var(--bg-trans);
   -webkit-backdrop-filter: blur(0.5em);
   backdrop-filter: blur(0.5em);
+  border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -288,16 +436,7 @@ header a:hover {
     margin-top: 2rem;
   }
 }
-
-@media (max-width: 550px) {
-  /* .projects img {
-    float: none;
-    width: 70vw;
-    max-height: none;
-    max-width: none;
-  } */
-}
-/* about ---------------------------------------- */
+/* about ##################################################### */
 .about-me,
 .contact {
   max-width: 1000px;
@@ -339,45 +478,113 @@ header a:hover {
     z-index: 2;
   }
 }
-
-/* My Work */
-
-.my-work {
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
-  text-align: center;
+/* contact ################################################### */
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid gray;
+  background-color: antiquewhite;
+  border-radius: 4px;
+  resize: vertical;
+  margin: 8px 0;
 }
 
-.portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
 
-.portfolio__item {
-  background: var(--clr-accent);
-  overflow: hidden;
+input[type='submit'] {
+  background-color: var(--col5);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
-.portfolio__img {
-  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+input[type='submit']:hover {
+  background-color: var(--col3);
 }
 
-.portfolio__item:focus {
-  position: relative;
-  z-index: 2;
+.container {
+  border-radius: 8px;
+  /*background-color: var(--col5);
+  */ /*border: 1px solid var(--col1);
+  */
+  padding: 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-  transform: scale(1.2);
-  opacity: 0.5;
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
 }
 
-/* footer */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
 
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+input[type='submit'] {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--col1);
+  color: var(--col5);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  border-radius: 8px;
+  transition: transform 200ms ease-in-out;
+  -webkit-transition: transform 200ms ease-in-out;
+  -moz-transition: transform 200ms ease-in-out;
+  -ms-transition: transform 200ms ease-in-out;
+  -o-transition: transform 200ms ease-in-out;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+input[type='submit']:hover {
+  transform: scale(1.1);
+}
+
+/* footer #################################################### */
 .footer {
-  background: #111;
-  color: var(--clr-accent);
+  background: var(--col6);
+  color: var(--col1);
   text-align: center;
   padding: 2.5em 0;
   font-size: var(--fs-h3);
@@ -415,239 +622,4 @@ header a:hover {
 
 .social-list__link {
   padding: 0.5em;
-}
-
-/* Individual portfolio item styles */
-
-.portfolio-item-individual {
-  padding: 0 2em 2em;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.portfolio-item-individual p {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Word cloud */
-
-.wordCloud {
-  display: grid;
-  gap: 10px;
-  grid-template:
-    '.              .              awareness     code                  security     . .'
-    '.              .              awareness     imagination    security     . .'
-    '.     dedication     awareness     creativity    creativity  creativity     science'
-    '.  .  collaboration collaboration solution    challenge     challenge'
-    '.              maintenance    maintenance   learn         solution    .     .'
-    '.              .              .             .             solution    .     .';
-}
-
-.wordCloud > div {
-  transition: 0.3s;
-  width: min-content;
-  height: min-content;
-  /* border: 1px solid gray; */
-  margin: 0;
-  padding: 0;
-  line-height: 1em;
-}
-
-.wordCloud > div:hover {
-  padding: 20px;
-  box-shadow: inset 5px 5px 30px 1px gray;
-  border-radius: 10px;
-  cursor: crosshair;
-  /* -webkit-transform: rotateZ(-15deg);
-  -ms-transform: rotateZ(-15deg);
-  transform: rotateZ(-15deg); */
-}
-
-#awareness {
-  color: var(--col1);
-  font-size: 2em;
-  grid-area: awareness;
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  text-align: center;
-
-  /* position: static; */
-  /* width: 100px; */
-  /* transform-origin: center center; */
-
-  /* align-self: center; */
-  /* justify-self: right; */
-}
-#security {
-  color: var(--col2);
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  font-size: 0.9em;
-  font-weight: bold;
-  grid-area: security;
-  align-self: flex-end;
-}
-#code {
-  color: var(--col3);
-  font-size: 2.5em;
-  font-weight: bold;
-  grid-area: code;
-}
-#science {
-  color: var(--col4);
-  font-size: 2.3em;
-  grid-area: science;
-}
-#learn {
-  color: var(--col5);
-  grid-area: learn;
-  font-size: 3em;
-}
-#solution {
-  color: var(--col1);
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  font-size: 2.5em;
-  grid-area: solution;
-  /* transform-origin: center left; */
-}
-#challenge {
-  color: var(--col2);
-  font-size: 1.3em;
-  grid-area: challenge;
-  align-self: center;
-}
-
-#imagination {
-  color: var(--col3);
-  font-size: 2em;
-  grid-area: imagination;
-}
-
-#dedication {
-  color: var(--col4);
-  grid-area: dedication;
-}
-#collaboration {
-  color: var(--col5);
-  font-size: 2em;
-  grid-area: collaboration;
-  justify-self: flex-end;
-}
-#maintenance {
-  color: var(--col1);
-  grid-area: maintenance;
-  justify-self: flex-end;
-}
-
-#creativity {
-  color: var(--col2);
-  font-size: 4em;
-  grid-area: creativity;
-}
-
-@media (max-width: 600px) {
-  .intro {
-    padding-top: 170px;
-    height: 500px;
-    width: min-content;
-    margin: 0 auto;
-  }
-
-  .wordCloud {
-    gap: 5px;
-  }
-
-  #awareness,
-  #collaboration {
-    font-size: 1.5em;
-  }
-
-  #science {
-    font-size: 1em;
-  }
-  #learn {
-    font-size: 2em;
-  }
-  #solution,
-  #imagination {
-    font-size: 1.5em;
-  }
-
-  #creativity {
-    font-size: 2.8em;
-  }
-}
-
-/* contact ------------------------------------------ */
-
-input[type='text'],
-input[type='email'],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid gray;
-  /* border: none; */
-  background-color: antiquewhite;
-  border-radius: 4px;
-  resize: vertical;
-  margin: 8px 0;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-input[type='submit'] {
-  background-color: var(--col5);
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-input[type='submit']:hover {
-  background-color: var(--col3);
-}
-
-.container {
-  border-radius: 8px;
-  /* background-color: var(--col5); */
-  /* border: 1px solid var(--col1); */
-  padding: 20px;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .col-25,
-  .col-75,
-  input[type='submit'] {
-    width: 100%;
-    margin-top: 0;
-  }
 }
