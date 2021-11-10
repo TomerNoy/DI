@@ -1,0 +1,30 @@
+-- select first_name as "first name", last_name as "last name" from employees;
+-- select distinct department_id from employees;
+-- select * from employees order by first_name desc;
+-- select first_name, last_name, salary, round(salary * 0.15, 2) as PF  from employees;
+-- select employee_id, concat(first_name, ' ', last_name) as "full name" from employees order by salary;
+-- select sum(salary) from employees;
+-- select min(salary), max(salary) from employees;
+-- select round(avg(salary), 2) from employees;
+-- select count(distinct employee_id) from employees;
+-- select upper(first_name) from employees;
+-- select substring(first_name from 1 for 3) from employees;
+-- select concat(first_name, ' ', last_name) as "full name" from employees;
+-- select  first_name, last_name, length(concat(first_name,' ',last_name)) from employees;
+-- select first_name, case when first_name ~ '^[0-9]' then 'true' else 'false'  end as "contain numbers" from employees;
+-- select * from employees limit 10
+-------------------------------------------------------
+-- select first_name, last_name, salary from employees where salary > 10000 and salary < 15000
+-- select first_name, last_name, hire_date from employees where extract(year from hire_date) = 1987
+-- select * from employees where first_name like '%c%' and first_name like '%e%'
+-- select employees.last_name, jobs.job_title, employees.salary
+-- 	from employees
+-- 		join jobs on employees.job_id = jobs.job_id
+-- 			where salary in (4500, 10000, 15000)
+-- 			and jobs.job_title != 'Programmer' 
+-- 				and jobs.job_title != 'Shipping Clerk'
+-- select last_name from employees where length(last_name) = 6
+-- select last_name from employees where last_name like '__e%'
+-- select distinct jobs.job_title from employees
+-- 	join jobs on jobs.job_id = employees.job_id
+-- select * from employees where upper(last_name) in('JONES', 'BLAKE', 'SCOTT', 'KING', 'FORD')
