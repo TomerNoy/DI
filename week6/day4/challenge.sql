@@ -41,7 +41,7 @@
 
 -- ALTER TABLE orders
 --  	add column user_id bigint,
---  	ADD constraint user_id
+--  	add constraint user_id
 --  	foreign key (user_id) 
 --  	references users (user_id);
 
