@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Family Page</h1>
+    {% if not name %}
+    <p>Family id not found</p>
+    {% else %} 
+        <h2>{{name}}</h2>
+        {% for animal in animals %} 
+            {% for key, value in animal.items %}
+                <p>{{key}} : {{value}}</p> 
+            {% endfor %}
+            <br>
+        {% endfor %} 
+     {% endif %}
+  </body>
+</html>
