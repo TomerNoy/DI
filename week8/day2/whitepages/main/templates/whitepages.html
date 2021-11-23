@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhitePages</title>
+</head>
+<body>
+    <h1> Person Details</h1>
+
+    {% if person %}
+        <p> name: {{ person.name }} </p>
+        <p> email: {{ person.email }} </p>
+        <p> phone: {{ person.phone }} </p>
+        <p> address: {{ person.address }} </p>
+     {% else %}
+        <p> person not found </p>
+    {% endif %}
+
+
+
+</body>
+</html>

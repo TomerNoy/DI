@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Animals{% endblock %}
+{% block content %}
+    <h1>Animals</h1>
+    <hr>
+    {% for animal in animals %}
+        <a href="{% url 'animal' animal.id %}">{{ animal.name }}</a>
+        <p>legs: {{ animal.legs }}</p>
+        <p>weight: {{ animal.weight }}</p>
+        <p>height: {{ animal.height }}</p>
+        <p>speed: {{ animal.speed }}</p>
+        <p>family: {{ animal.family }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}
