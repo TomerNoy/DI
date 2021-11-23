@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Person
 
 
-def phonenumber(request, input):
+def find_person(request, input):
 
     if any(char.isdigit() for char in input):
         person = Person.objects.filter(phone=input)
