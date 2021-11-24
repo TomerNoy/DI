@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Gif{% endblock %}
+{% block content %}
+        <h1>{{ gif.title }}</h1>
+    <img src="{{ gif.url }}" alt="gif" width="500" height="600">
+    <br>
+    <p>likes: {{ gif.likes }} </p>
+    <button style="background-color: greenyellow"><a href="{% url 'inc' gif.id %}">LIKE</a></button>
+    <button style="background-color: red"><a href="{% url 'dec' gif.id %}">DISLIKE</a></button>
+
+{% endblock %}

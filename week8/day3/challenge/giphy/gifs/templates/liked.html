@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Animal{% endblock %}
+{% block content %}
+    <h1>Liked Gifs</h1>
+    {% for gif in liked %}
+        <h2>{{ gif.title }}</h2>
+        <img src="{{ gif.url }}" alt="gif" width="500" height="600">
+        <p>likes: {{ gif.likes }}</p>
+        <br>
+    {% endfor %}
+{% endblock %}
