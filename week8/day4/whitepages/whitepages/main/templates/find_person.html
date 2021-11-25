@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post" class="form">
+        {% csrf_token %}
+        <div class="container input-group my-5">
+            <input type="text" class="form-control ml-5" id="input" placeholder="Input Name or Phone #" name="input" required>
+            <button type="submit" class="btn btn-primary">Find</button>
+        </div>
+    </form>
+
+{% endblock %}

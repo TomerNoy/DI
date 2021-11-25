@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for person in persons %}
+        <div class="card mx-5 my-5" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <a href="{% url 'person_select' person.name %}" class="list-group-item text-success ">{{ person.name }}</a>
+                <li class="list-group-item">mail: {{ person.email }}</li>
+                <li class="list-group-item">phone: {{ person.phone }}</li>
+                <li class="list-group-item">address: {{ person.address }}</li>
+            </ul>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
