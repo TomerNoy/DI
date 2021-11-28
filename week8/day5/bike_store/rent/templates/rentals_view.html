@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Rentals{% endblock %}
+{% block content %}
+
+    <button onclick="location.href=' {% url  "rental_form_view" %} '" type="button" class="btn btn-primary mx-5 my-3">
+        Rent A Vehicle
+    </button>
+
+    {% for rental in rentals %}
+        <div class="card mx-5 my-3" style="width: 25rem;">
+            <a class="card-header" href="{% url 'rental_view' rental.id %}"> ID {{ rental.id }} </a>
+            <div class="card-body">
+                <p class="card-text">Rental date: {{ rental.rental_date }}</p>
+                <p class="card-text">Returned date: {{ rental.return_date|default:'not returned yet' }}</p>
+                <hr>
+                <p class="card-text">Customer: <span> <a
+                        href="{% url 'customer_view' rental.customer.id %}"> {{ rental.customer.first_name }} {{ rental.customer.last_name }}
+                </a> </span></p>
+                <hr>
+                <p class="card-text">Vehicle: <span> <a href="{% url 'vehicle_view' rental.vehicle.id %}">
+                    {{ rental.vehicle.vehicle_type.name }} {{ rental.vehicle.size.name }}
+                </a> </span></p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

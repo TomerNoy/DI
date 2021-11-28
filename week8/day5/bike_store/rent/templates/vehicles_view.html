@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Vehicles{% endblock %}
+{% block content %}
+
+    <button onclick="location.href=' {% url  "vehicle_form_view" %} '" type="button" class="btn btn-primary mx-5 my-3">
+        Add a Vehicle
+    </button>
+
+    {% for type_name, group in vehicles_group_by_type.items %}
+        <hr>
+        <h5 class="mx-5 my-5 text-primary"> {{ type_name }} category</h5>
+
+        {% for vehicle in group %}
+            <div class="card mx-5 my-3" style="width: 25rem;">
+                <a class="card-header" href="{% url 'vehicle_view' vehicle.id %}"> ID {{ vehicle.id }} </a>
+                <div class="card-body">
+                    <h4 class="card-text">{{ vehicle.vehicle_type.name }} {{ vehicle.size.name }}</h4>
+                    <p class="card-text">Cost: {{ vehicle.real_cost }} $</p>
+                    <p class="card-text">Created at: {{ vehicle.date_created.year }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+{% endblock %}

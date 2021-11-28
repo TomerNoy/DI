@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Add Customer{% endblock %}
+{% block content %}
+
+    <div class="card mx-5 my-3" style="width: 25rem;">
+        <div class="card-body">
+            <a class="card-link" href="{% url 'rental_view' rental.id %}"> ID {{ rental.id }} </a>
+            <p class="card-text">Rental date: {{ rental.rental_date }}</p>
+            <p class="card-text">Returned date: {{ rental.return_date|default:'not returned yet' }}</p>
+            <hr>
+            <p class="card-text">Customer: <span> <a
+                    href="#"> {{ rental.customer.first_name }} {{ rental.customer.last_name }}
+                </a> </span></p>
+
+            <div class="container">
+                <p>{{ rental.customer.email }}</p>
+                <p>{{ rental.customer.address }}</p>
+                <p>{{ rental.customer.city }} {{ rental.customer.country }}</p>
+                <p>{{ rental.customer.phone_number }}</p>
+            </div>
+
+            <hr>
+            <p class="card-text">Vehicle: <span> <a href="#">
+                    {{ rental.vehicle.vehicle_type.name }} {{ rental.vehicle.size.name }}
+                </a> </span></p>
+
+            <div class="container">
+                <p>Created: {{ rental.vehicle.date_created }}</p>
+                <p>Cost: {{ rental.vehicle.real_cost }}</p>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
