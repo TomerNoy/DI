@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Search{% endblock %}
+{% block content %}
+
+    <div class="container mt-5">
+        <form method="post" class="form-inline">
+            {% csrf_token %}
+            <div class="container my-5 ">
+                <input type="text" style="width: 300px;" placeholder="Search By Name" name="name" required>
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+
+        <form method="post" class="form-inline">
+            {% csrf_token %}
+            <div class="container my-5">
+                <input type="text" style="width: 300px;" placeholder="Search By Phone Number" name="phone_number" required>
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
+

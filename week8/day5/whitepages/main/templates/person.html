@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Person{% endblock %}
+{% block content %}
+
+    <div class="container">
+        <div class="card mt-3" style="width: max-content">
+            <div class="card-header">{{ person.name }}</div>
+            <div class="card-body text-dark">
+                <h4 class="card-title">{{ person.phone_number }}</h4>
+                <h5 class="card-title">{{ person.email }}</h5>
+                <p class="card-text">{{ person.address }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
