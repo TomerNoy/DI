@@ -21,5 +21,6 @@ urlpatterns = [
     path('', lambda x: redirect('films/homepage')),
     path('admin/', admin.site.urls),
     path('films/', include('films.urls')),
+    path('accounts/', include('accounts.urls')),
 
 ]
