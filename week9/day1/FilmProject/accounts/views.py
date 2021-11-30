@@ -1,14 +1,15 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+# from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render
 from django.urls import reverse_lazy
 
-from accounts.forms import MyAuthenticationForm, UserForm, RegistrationForm
-from django.views.generic import CreateView, UpdateView, DetailView, DeleteView, ListView
+from accounts.forms import MyAuthenticationForm, UserForm
+from django.views.generic import CreateView
 
-from films.models import Film
+
+# from films.models import Film
 
 
 class MySignupView(CreateView):
@@ -37,7 +38,6 @@ class DaLoginView(LoginView):
 @login_required
 def profile_view(request):
     return render(request, 'accounts/profile.html')
-
 
 # this is example from class
 # class SignupView(CreateView):
