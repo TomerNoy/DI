@@ -1,19 +1,17 @@
 from django.db import models
 from datetime import datetime
 from django.utils import timezone
-from accounts.models import User
-from django.core.validators import *
 
 
 class Country(models.Model):
-    name = models.CharField(max_length=30, unique=True)
+    name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=30, unique=True)
+    name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
@@ -36,14 +34,3 @@ class Film(models.Model):
 
     def __str__(self):
         return self.title
-
-
-class Comment(models.Model):
-    content = models.TextField()
-    timestamp = models.DateTimeField(auto_now_add=True)
-    film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='comments')
-    rating = models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(0)])
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
-
-    # def get_absolute_url(self):
-    #     return reverse('view_post', kwargs={'pk': self.post.id})

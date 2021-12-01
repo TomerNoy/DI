@@ -12,7 +12,14 @@
                     </li>
                     {% for director in film.director.all %}
                         <li>
-                            <h5 class="card-title mx-1">{{ director }}</h5>
+                            <h5 class="card-title mx-1">{{ director }}
+                                {% if user.is_superuser %}
+                                    <span><a
+                                            href="{% url 'del-director' director.pk %}"
+                                            class="card-link text-decoration-none link-danger">Delete director</a>
+                                    </span>
+                                {% endif %}
+                            </h5>
                         </li>
                     {% endfor %}
                 </ul>
@@ -29,12 +36,48 @@
                     {% endfor %}
                 </ul>
                 <h6 class="card-subtitle mb-2 text-muted">Country: {{ film.created_in_country }}</h6>
+                {% if film.likes < 0 %}
+                    <P> unrated</P>
+                {% else %}
+                    {#                    {% for i in  %}#}
+                {% endif %}
 
-                <a href="#" class="card-link text-decoration-none">Modify the director</a>
+
+                {% if user.is_superuser %}
+
+                    <a href="#" class="card-link text-decoration-none">Modify director</a>
+                    <hr>
+                    <a href="#" class="card-link text-decoration-none">Modify film</a>
+
+                    <a href="{% url 'del-film' film.pk %}" class="card-link text-decoration-none link-danger ">Delete
+                        film</a>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                    <hr>
+                    <a href="{% url 'comment-film' film.id %}"
+                       class="card-link text-decoration-none link-primary ">leave a comment </a>
+                {% endif %}
                 <hr>
-                <a href="#" class="card-link text-decoration-none">Modify the film</a>
+                <h6 class="text-primary">Comments </h6>
+
+                {% for comment in film.comments.all %}
+                    <p> {{ comment.content }} </p>
+                    <p> rating {{ comment.rating }} </p>
+                    <p> by {{ comment.owner }} </p>
+                    <hr>
+                {% endfor %}
             </div>
+
         </div>
 
     {% endfor %}
+
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="alert alert-{{ messages.tags }} m-2" id="msg" role="alert">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

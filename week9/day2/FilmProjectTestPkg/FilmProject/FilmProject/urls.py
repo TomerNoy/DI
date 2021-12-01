@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.shortcuts import redirect
 from django.urls import path, include
 
+path('films_app/', include('films.urls')),
+
 urlpatterns = [
     path('', lambda x: redirect('films/homepage')),
     path('admin/', admin.site.urls),
     path('films/', include('films.urls')),
     path('accounts/', include('accounts.urls')),
+
 ]

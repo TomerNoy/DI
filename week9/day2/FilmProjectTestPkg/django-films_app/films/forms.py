@@ -14,7 +14,7 @@ from django.forms import ModelForm, Select
 class AddFilmForm(forms.ModelForm):
     class Meta:
         model = Film
-        exclude = ['likes']
+        fields = '__all__'
         labels = {
             'created_in_country': 'Country'
         }
